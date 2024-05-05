@@ -12,7 +12,6 @@ import censusgeocode as cg
 #censusgeocode takes csv input with adresses and provides a new csv with previous information and a census tract number for each address
 import pandas as pd
 
-
 ogPath = 'data/addresses.csv'
 #path to find input csv file
 resPath = 'data/results.csv'
