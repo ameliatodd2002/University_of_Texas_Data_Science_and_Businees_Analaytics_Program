@@ -436,8 +436,4 @@ Business Recommendations:
 *   We also found that the conversion rate for the new website was significantly higher than the old one, once again confirming the newer website's greater success than the existing website. Therefore, I believe the company would get many more subscribers by switching to the new website.
 *   Since there was not much of a difference between language used and conversion rate or the time spent on the website, I do not recommend trying to market towards specific groups based on preferred language, as all are equally likely to convert to subscribers.
 
-___
-"""
-
-!jupyter nbconvert PROJECT2.ipynb --to html
 
