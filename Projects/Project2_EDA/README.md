@@ -21,7 +21,7 @@ Additional Features – Other relevant details about the orders
 
 Files in the Repository:
 
-EDA_food_aggregator.ipynb – Jupyter Notebook containing all analyses, visualizations, and insights
+PROJECT1-4.ipynb – Jupyter Notebook containing all analyses, visualizations, and insights
 foodhub_order.csv – The dataset used for this analysis
 requirements.txt – List of required Python libraries
 
