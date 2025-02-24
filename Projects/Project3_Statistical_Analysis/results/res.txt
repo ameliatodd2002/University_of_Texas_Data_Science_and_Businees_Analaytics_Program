@@ -1,0 +1,16 @@
+Conclusion:
+
+- The time users spent on the new page was much higher than the time users spent on the existing page.
+- Separating the data by people that converted and did not convert, showed us that the people that did convert spent much more time on either website they were assigned to than the alternative group.
+- Using a one-tailed two independent sample t test, we revealed that users do spend a significantly larger amount of time on the new landing page than the existing landing page (μ1 > μ2).
+- Using a two-proportions z-test, we found that the conversion rate for the new page is significantly greater than the conversion rate for the old page.
+- Using a Chi-Square test of Independence, we found that preferred language and conversion rate our independent variables.
+- Using a One-Way Analysis of Variance (ANOVA) test, we found that the amount of time spent on the new page is the same for all language users (μ1 = μ2 = μ3).
+
+
+Business Recommendations:
+
+- Since people that did convert spent much more time on either website they were assigned to than the alternative group, I recommend focusing on trying to get users to spend more time on the website, as that could lead to a higher chance they convert to a subscriber.
+- We also learned that the new website has a significantly higher mean amount of time users spent on it, meaning that the new website is achieving the previous goal. Therefore, this website seems to be more successful, and I would recommend switching to this website entirely.
+- We also found that the conversion rate for the new website was significantly higher than the old one, once again confirming the newer website's greater success than the existing website. Therefore, I believe the company would get many more subscribers by switching to the new website.
+- Since there was not much of a difference between language used and conversion rate or the time spent on the website, I do not recommend trying to market towards specific groups based on preferred language, as all are equally likely to convert to subscribers.
