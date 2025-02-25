@@ -9,21 +9,21 @@ Dataset Information:
 
 The dataset contains transactional records from food orders placed through an aggregator app. Key columns include:
 
-Order ID – Unique identifier for each order
-Restaurant Name – Name of the restaurant fulfilling the order
-Cuisine Type – Type of cuisine offered
-Ratings – Customer ratings for each order
-Delivery Time – Time taken for the order to be delivered
-Order Cost – Total amount paid for the order
-Additional Features – Other relevant details about the orders
+- Order ID – Unique identifier for each order
+- Restaurant Name – Name of the restaurant fulfilling the order
+- Cuisine Type – Type of cuisine offered
+- Ratings – Customer ratings for each order
+- Delivery Time – Time taken for the order to be delivered
+- Order Cost – Total amount paid for the order
+- Additional Features – Other relevant details about the orders
 
 
 Files in the Repository:
 
-PROJECT1-4.ipynb – Jupyter Notebook containing all analyses, visualizations, and insights
-project1-2.py - Python script exported from Google Collab
-foodhub_order.csv – The dataset used for this analysis
-requirements.txt – List of required Python libraries
+- PROJECT1-4.ipynb – Jupyter Notebook containing all analyses, visualizations, and insights
+- project1-2.py - Python script exported from Google Collab
+- foodhub_order.csv – The dataset used for this analysis
+- requirements.txt – List of required Python libraries
 
 
 Analysis & Findings:
