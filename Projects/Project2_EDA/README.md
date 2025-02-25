@@ -1,6 +1,5 @@
 Exploratory Data Analysis (EDA) of a Food Aggregator App Dataset
 
-
 Project Overview:
 
 This project focuses on performing Exploratory Data Analysis (EDA) on a dataset from a food aggregator app. The goal was to analyze order data to uncover patterns in customer preferences, restaurant performance, and potential business optimizations.
@@ -22,6 +21,7 @@ Additional Features – Other relevant details about the orders
 Files in the Repository:
 
 PROJECT1-4.ipynb – Jupyter Notebook containing all analyses, visualizations, and insights
+PROJECT1-4.py - Python script exported from Google Collab
 foodhub_order.csv – The dataset used for this analysis
 requirements.txt – List of required Python libraries
 
@@ -58,3 +58,4 @@ Open and run the Jupyter Notebook (PROJECT1-4.ipynb).
 Conclusion:
 
 This EDA provided valuable insights into customer ordering behavior, restaurant performance, and potential areas for improvement. The findings can help businesses refine their pricing, promotions, and logistics strategies for better efficiency and customer satisfaction.
+
