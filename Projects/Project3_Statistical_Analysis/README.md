@@ -9,46 +9,48 @@ Dataset Information:
 
 The dataset contains user interaction records with either the new or old landing page. Key columns:
 
-landing_page: Indicates whether the user visited the new or old page.
-time_spent_on_the_page: Duration spent on the page (in seconds).
-converted: Whether the user subscribed (1) or not (0).
-language_preferred: The language version of the page.
+- landing_page: Indicates whether the user visited the new or old page.
+- time_spent_on_the_page: Duration spent on the page (in seconds).
+- converted: Whether the user subscribed (1) or not (0).
+- language_preferred: The language version of the page.
 
 
 Files in the Repository:
 
-PROJECT2-2.ipynb – Jupyter Notebook with analysis, visualizations, and insights.
-project2.py - Python script exported from Google Collab
-abtest.csv – Dataset used for analysis.
-requirements.txt – List of required Python libraries.
+- PROJECT2-2.ipynb – Jupyter Notebook with analysis, visualizations, and insights.
+- project2.py - Python script exported from Google Collab
+- abtest.csv – Dataset used for analysis.
+- requirements.txt – List of required Python libraries.
 
 
 Analysis and Findings:
 
 Key Insights:
-Users spent significantly more time on the new page than the old page.
-Users who converted spent more time on either page than those who did not.
-A one-tailed t-test confirmed that users spend significantly more time on the new page than the old page (μ1 > μ2).
-A two-proportions z-test showed that the conversion rate for the new page is significantly higher than the old page.
-A Chi-Square test revealed that language preference is independent of conversion rate.
-An ANOVA test indicated that time spent on the new page does not vary significantly by language.
-Business Recommendations
+- Users spent significantly more time on the new page than the old page.
+- Users who converted spent more time on either page than those who did not.
+- A one-tailed t-test confirmed that users spend significantly more time on the new page than the old page (μ1 > μ2).
+- A two-proportions z-test showed that the conversion rate for the new page is significantly higher than the old page.
+- A Chi-Square test revealed that language preference is independent of conversion rate.
+- An ANOVA test indicated that time spent on the new page does not vary significantly by language.
 
-Encourage users to stay longer on the website, as higher engagement correlates with a higher conversion rate.
-Switch to the new website entirely, as it leads to higher engagement and a significantly higher conversion rate.
-Avoid targeting users based on language preference, as conversion rates do not significantly differ by language.
-Installation and Setup
+Business Recommendations:
 
+- Encourage users to stay longer on the website, as higher engagement correlates with a higher conversion rate.
+- Switch to the new website entirely, as it leads to higher engagement and a significantly higher conversion rate.
+- Avoid targeting users based on language preference, as conversion rates do not significantly differ by language.
+
+
+Installation and Setup:
 
 To run the analysis:
 
-Clone the repository:
-git clone https://github.com/ameliatodd2002/DS-Portfolio.git  
-cd Project3_Statistical_Analysis  
-Install dependencies:
-pip install -r requirements.txt  
-Run the Jupyter Notebook:
-jupyter notebook PROJECT2-2.ipynb  
+- Clone the repository:
+- git clone https://github.com/ameliatodd2002/DS-Portfolio.git  
+- cd Project3_Statistical_Analysis  
+- Install dependencies:
+- pip install -r requirements.txt  
+- Run the Jupyter Notebook:
+- jupyter notebook PROJECT2-2.ipynb  
 
 
 Conclusion:
