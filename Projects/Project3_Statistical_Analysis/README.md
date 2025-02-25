@@ -18,6 +18,7 @@ language_preferred: The language version of the page.
 Files in the Repository:
 
 PROJECT2-2.ipynb – Jupyter Notebook with analysis, visualizations, and insights.
+PROJECT2-2.py - Python script exported from Google Collab
 abtest.csv – Dataset used for analysis.
 requirements.txt – List of required Python libraries.
 
