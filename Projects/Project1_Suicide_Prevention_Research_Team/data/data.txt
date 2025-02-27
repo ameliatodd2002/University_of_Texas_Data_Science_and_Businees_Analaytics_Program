@@ -1,0 +1,15 @@
+This data is confidential, so I am unable to provide it. However, I am able to include inforamtion about the structure of the data.
+
+Key columns in original dataset:
+- ID
+- address
+- city
+- state
+- zip code
+
+Key columns in output data:
+- address
+- tract code
+- state code
+- county code
+- block
