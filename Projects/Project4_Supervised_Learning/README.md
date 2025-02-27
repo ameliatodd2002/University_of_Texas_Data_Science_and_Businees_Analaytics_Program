@@ -28,10 +28,10 @@ The data contains the different attributes of used/refurbished phones and tablet
 
 Files included in repository:
 
-PROJECT3-2.ipynb – Jupyter Notebook with analysis, regression model, and insights.
-project3.py - Python script exported from Google Collab
-used_device_data.csv – Dataset used for analysis and testing.
-requirements.txt – List of required Python libraries.
+- PROJECT3-2.ipynb – Jupyter Notebook with analysis, regression model, and insights.
+- project3.py - Python script exported from Google Collab
+- used_device_data.csv – Dataset used for analysis and testing.
+- requirements.txt – List of required Python libraries.
 
 
 Analysis and Findings:
@@ -49,13 +49,13 @@ Installation and Setup:
 
 To run the analysis:
 
-Clone the repository:
-git clone https://github.com/ameliatodd2002/DS-Portfolio.git
-cd Project4_Supervised_Learning
-Install dependencies:
-pip install -r requirements.txt
-Run the Jupyter Notebook:
-jupyter notebook PROJECT3-2.ipynb
+- Clone the repository:
+- git clone https://github.com/ameliatodd2002/DS-Portfolio.git
+- cd Project4_Supervised_Learning
+- Install dependencies:
+- pip install -r requirements.txt
+- Run the Jupyter Notebook:
+- jupyter notebook PROJECT3-2.ipynb
 
 
 Conclusion:
