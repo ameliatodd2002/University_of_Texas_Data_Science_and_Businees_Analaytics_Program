@@ -1,66 +1,75 @@
-Suicide Prevention Research Team Census Geocoder Interaction Program
+Automated Census Geocoding for Suicide Prevention Research
 
 Project Overview:
 
-This project interacts with censusgeocoder as an API. I created this project for the Sucide Prevention Research Team at Lousiana state University in order to automate a task that would have taken weeks, and turned it into an overnight process that the computer could handle unsupervised. This project takes a csv file which includes data from the Texas Children's Hospital. The csv has columns ID, address, city, state, and zip code for each of the 249,975 participants. However, censusgeocoder can only process batches of 9999 at once, so this script splits the csv into batches and send them through one at a time. This ensures acceracy, efficiency, and no time wasted if censusgeocoder crashes (which it often did, causing us to start over). Then, this program creates a results csv that inlcudes the address, census tract, state code, county code, and block number. The program creates a datafram from the original data, and enumerates through each batch to create the proper batch size. Then, it calls on another function that reformats the data provided by censusgeocoder into the results data with the set columns.
+This project automates the interaction with the Census Geocoder API to process participant address data efficiently. It was developed for the Suicide Prevention Research Team at Louisiana State University to replace a manual process that would have taken weeks with an overnight, unsupervised script.
+
+The program takes a CSV file containing 249,975 participant records from Texas Children's Hospital, including ID, address, city, state, and zip code. Since the Census Geocoder can only process batches of 9,999 at a time, this script automatically splits the data into batches, submits them sequentially, and handles errors to prevent data loss and unnecessary restarts.
+
+The output file includes the address, census tract, state code, county code, and block number. The program processes the data in a structured manner, ensuring accuracy and efficiency while mitigating API crashes.
 
 
 Dataset Information:
 
-The iriginal dataset includes data from participants at the Texas Children's Hospital.
-
-Key columns in original dataset:
+- Original dataset (input):
 - ID
-- address
-- city
-- state
-- zip code
+- Address
+- City
+- State
+- Zip Code
 
-Key columns in output data:
-- address
-- tract code
-- state code
-- county code
-- block
+Processed dataset (output):
+- Address
+- Census Tract Code
+- State Code
+- County Code
+- Block Number
 
 
 Files in the Repository:
 
-- PROJECT1-4.ipynb – Jupyter Notebook containing all analyses, visualizations, and insights
-- project1-2.py - Python script exported from Google Collab
-- foodhub_order.csv – The dataset used for this analysis
+- SPR.py – Python script for processing data
+- data.txt – Description of the dataset
 - requirements.txt – List of required Python libraries
 
 
-Analysis & Findings:
+Context & Additional Data Integration:
 
-Through detailed EDA, I identified trends and insights related to customer behavior, restaurant efficiency, and pricing strategies. Some key observations include:
+- Beyond this program, further data integration and translation were performed to include:
+  - Houston Police Records
+  - Houston State of Health Data
+  - Suicide Ideation Rates (independent variable)
+- With this expanded dataset, I conducted an in-depth statistical analysis in SPSS to identify the strongest predictors of high suicide ideation rates at the census-tract level.
 
-- Restaurant ratings did not significantly vary based on food preparation or delivery time.
-- Higher-rated restaurants were not always the most frequently ordered from, suggesting factors beyond ratings influence customer choices.
-- Delivery time distribution revealed outliers, indicating occasional inefficiencies in the fulfillment process.
-- Order cost analysis showed that certain cuisine types had consistently higher average order values.
-- Rather than a single major finding, this project uncovered multiple small yet meaningful insights that help understand user behavior and service performance.
-
-Key Insights & Recommendations
-
-- Since ratings are not strongly influenced by delivery speed, restaurants could introduce premium pricing for faster delivery options without negatively impacting customer satisfaction.
-- Frequent order trends suggest that offering personalized promotions on high-demand cuisine types could increase sales.
-- Outliers in delivery time indicate potential bottlenecks in fulfillment. Addressing these inconsistencies could improve customer experience and optimize restaurant operations.
+Statistical Findings:
+- Using only census tracts with at least 25 surveys (309 tracts total), the data followed a normal distribution:
+  - Range: 3% to 48% (45%)
+  - Mean: 21.36
+  - SD: 8.56
+  - Skew: 0.56
+  - Kurtosis: 0.25
+- A stricter analysis using minimum 50 surveys per tract (63 tracts total) also showed a normal distribution:
+  - Range: 10% to 33% (23%)
+  - Mean: 20.39
+  - SD: 5.26
+  - Skew: 0.58
+  - Kurtosis: -0.11
 
 
 Installation & Setup:
 
-To run the analysis, follow these steps:
+To run the program, follow these steps:
 
 Clone the repository:
 - git clone https://github.com/ameliatodd2002/DS-Portfolio.git
-- cd Project2_EDA
+- cd Project1_Suicide_Prevention_Research
 - Install dependencies:
 - pip install -r requirements.txt
-- Open and run the Jupyter Notebook (PROJECT1-4.ipynb).
+- Open and run the script (SPR.py).
 
 
 Conclusion:
 
-This EDA provided valuable insights into customer ordering behavior, restaurant performance, and potential areas for improvement. The findings can help businesses refine their pricing, promotions, and logistics strategies for better efficiency and customer satisfaction.
+- The normal distribution of suicidal behavior across Houston's census tracts enables statistical modeling at a social-ecological level, helping identify high-risk areas.
+- This enables us to pinpoint census tracts with higher or lower rates of suicidal behavior.
+- Understanding the suicidal behavior distribution can inform the development and targeting of intervention strategies, and it provides a basis for public health planning and resource allocation.
