@@ -26,3 +26,6 @@ Avoid Oversimplified Feature Focus:
 - Individual specs (e.g., weight) do not determine price alone—their interactions matter.
 - For example, a heavier phone may indicate a larger battery, making it more desirable despite the weight.
 - Understanding feature relationships is crucial to avoid misleading pricing strategies.
+
+
+This model equips ReCell with a data-driven approach to pricing refurbished smartphones, maximizing profits while ensuring competitive pricing. Further improvements could include testing non-linear models or incorporating market trends & customer sentiment data.
