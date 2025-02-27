@@ -1,0 +1,9 @@
+Results from this project are also confidential, as they include the location of people struggling with suicide ideation. 
+However, these are the columns included in the output dataset:
+
+Key columns in output data:
+- address
+- tract code
+- state code
+- county code
+- block
