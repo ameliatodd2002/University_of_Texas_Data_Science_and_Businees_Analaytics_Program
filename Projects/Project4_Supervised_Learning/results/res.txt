@@ -1,0 +1,35 @@
+Final Model Performance & Key Insights
+The final linear regression model achieved an R² of 0.844, meaning the selected variables explain 84.4% of the variance in used smartphone prices.
+The equation used for prediction is:
+normalized used price = -0.41727730370151694 + 0.0196548933373735 * ( main_camera_mp ) +  0.013283854744645426 * ( selfie_camera_mp ) +  0.023546993773401727 * ( ram ) +  0.0015971302387318648 * ( weight ) +  1.2082111403732825 * ( normalized_new_price ) +  -0.03858244293186329 * ( years_out ) +  -0.04183447812024251 * ( brand_name_LG ) +  -0.036832609866963295 * ( brand_name_Others ) +  -0.04721591042782653 * ( brand_name_Samsung ) +  -0.06273438914126221 * ( brand_name_Sony ) +  0.07454635421813148 * ( brand_name_Xiaomi ) +  -0.07154813472250998 * ( normalized_new_price_sq )
+
+The most impactful factors in predicting used phone prices are:
+- New price at launch (strongest predictor)
+- Camera specifications (main & selfie)
+- RAM size
+- Device age (years since release)
+- Brand influence (Samsung, Sony, LG, and Xiaomi had notable effects)
+- Non-linear price relationships (e.g., squared term for new price)
+
+
+Actionable Insights and Recommendations:
+- Based on this model, we are able to predict the price of a used device through this equation: normalized used price = -0.41727730370151694 + 0.0196548933373735 * ( main_camera_mp ) + 0.013283854744645426 * ( selfie_camera_mp ) + 0.023546993773401727 * ( ram ) + 0.0015971302387318648 * ( weight ) + 1.2082111403732825 * ( normalized_new_price ) + -0.03858244293186329 * ( years_out ) + -0.04183447812024251 * ( brand_name_LG ) + -0.036832609866963295 * ( brand_name_Others ) + -0.04721591042782653 * ( brand_name_Samsung ) + -0.06273438914126221 * ( brand_name_Sony ) + 0.07454635421813148 * ( brand_name_Xiaomi ) + -0.07154813472250998 * ( normalized_new_price_sq )
+- We can explain about 84.4% of the variance in the price of used devices through these variables: main camera resolution, selfie camera resolution, ram, weight, normalized new price, the number of years the device has been out, whether it is an LG device, a device that does not fall into one of the main brand categories, a Samsung device, a Sony device, or a Xiaomi device.
+- Based on these observations, I would advice the startup ReCell to use this equation to figure out which combinations of variables produce th highest resell price, and aim towards selling those devices on their site, as I assume they get a percentage of the profits. So, by using this model they can determine which kinds of devices would produce the highest profits for their company.
+- Also, even if ReCell decides to sell all deices, regardless of the predicted price, being able to use this model to accurately predict the price that a customer is willing to buy it would be extremely beneficial to the company. It would bring customers in because they would be compelled by the prices on the site since they would be pricing it based soley on the components and data of what customers are willing to buy each device for.
+- I would also reccommend that ReCell does not focus too much on individual characteristics of the device alone, as we see in the data that the price can vary drastically for each device depending on the combination of each type of component, not just one component alone. For example, we see that just because a device is heavy does not mean the price or value of the device decreases because this could indicate that the battery size is actually much larger, which is an attractive feature in the device, and could make the price increase significantly. This is why paying attention to the relationships between each variable, and accounting for collinearity in the data is so important.
+
+
+Actionable Recommendations for ReCell:
+
+Optimize Inventory for Higher Resale Profits:
+- ReCell can prioritize devices with the highest resale potential based on this model.
+- Devices with higher RAM, camera quality, and a strong brand presence tend to retain more value.
+- Weight alone is not a direct predictor of price but can indicate valuable features like larger batteries.
+Data-Driven Pricing Strategy:
+- Even if all devices are sold regardless of price, this model helps accurately predict customer demand-based pricing.
+- Using data-backed pricing can attract more buyers by aligning with market trends.
+Avoid Oversimplified Feature Focus:
+- Individual specs (e.g., weight) do not determine price alone—their interactions matter.
+- For example, a heavier phone may indicate a larger battery, making it more desirable despite the weight.
+- Understanding feature relationships is crucial to avoid misleading pricing strategies.
