@@ -7,15 +7,21 @@ This project interacts with censusgeocoder as an API. I created this project for
 
 Dataset Information:
 
-The dataset contains transactional records from food orders placed through an aggregator app. Key columns include:
+The iriginal dataset includes data from participants at the Texas Children's Hospital.
 
-- Order ID – Unique identifier for each order
-- Restaurant Name – Name of the restaurant fulfilling the order
-- Cuisine Type – Type of cuisine offered
-- Ratings – Customer ratings for each order
-- Delivery Time – Time taken for the order to be delivered
-- Order Cost – Total amount paid for the order
-- Additional Features – Other relevant details about the orders
+Key columns in original dataset:
+- ID
+- address
+- city
+- state
+- zip code
+
+Key columns in output data:
+- address
+- tract code
+- state code
+- county code
+- block
 
 
 Files in the Repository:
