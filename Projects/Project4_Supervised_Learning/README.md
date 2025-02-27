@@ -28,36 +28,37 @@ The data contains the different attributes of used/refurbished phones and tablet
 
 Files included in repository:
 
-PROJECT2-2.ipynb – Jupyter Notebook with analysis, visualizations, and insights.
-project2.py - Python script exported from Google Collab
-abtest.csv – Dataset used for analysis.
+PROJECT3-2.ipynb – Jupyter Notebook with analysis, regression model, and insights.
+project3.py - Python script exported from Google Collab
+used_device_data.csv – Dataset used for analysis and testing.
 requirements.txt – List of required Python libraries.
+
+
 Analysis and Findings:
 
-Key Insights:
+Key Insights/Business Recommendations:
 
-Users spent significantly more time on the new page than the old page.
-Users who converted spent more time on either page than those who did not.
-A one-tailed t-test confirmed that users spend significantly more time on the new page than the old page (μ1 > μ2).
-A two-proportions z-test showed that the conversion rate for the new page is significantly higher than the old page.
-A Chi-Square test revealed that language preference is independent of conversion rate.
-An ANOVA test indicated that time spent on the new page does not vary significantly by language.
-Business Recommendations:
+- Based on this model, we are able to predict the price of a used device through this equation: normalized used price = -0.41727730370151694 + 0.0196548933373735 * ( main_camera_mp ) + 0.013283854744645426 * ( selfie_camera_mp ) + 0.023546993773401727 * ( ram ) + 0.0015971302387318648 * ( weight ) + 1.2082111403732825 * ( normalized_new_price ) + -0.03858244293186329 * ( years_out ) + -0.04183447812024251 * ( brand_name_LG ) + -0.036832609866963295 * ( brand_name_Others ) + -0.04721591042782653 * ( brand_name_Samsung ) + -0.06273438914126221 * ( brand_name_Sony ) + 0.07454635421813148 * ( brand_name_Xiaomi ) + -0.07154813472250998 * ( normalized_new_price_sq )
+- We can explain about 84.4% of the variance in the price of used devices through these variables: main camera resolution, selfie camera resolution, ram, weight, normalized new price, the number of years the device has been out, whether it is an LG device, a device that does not fall into one of the main brand categories, a Samsung device, a Sony device, or a Xiaomi device.
+- Based on these observations, I would advice the startup ReCell to use this equation to figure out which combinations of variables produce th highest resell price, and aim towards selling those devices on their site, as I assume they get a percentage of the profits. So, by using this model they can determine which kinds of devices would produce the highest profits for their company.
+- Also, even if ReCell decides to sell all deices, regardless of the predicted price, being able to use this model to accurately predict the price that a customer is willing to buy it would be extremely beneficial to the company. It would bring customers in because they would be compelled by the prices on the site since they would be pricing it based soley on the components and data of what customers are willing to buy each device for.
+- I would also reccommend that ReCell does not focus too much on individual characteristics of the device alone, as we see in the data that the price can vary drastically for each device depending on the combination of each type of component, not just one component alone. For example, we see that just because a device is heavy does not mean the price or value of the device decreases because this could indicate that the battery size is actually much larger, which is an attractive feature in the device, and could make the price increase significantly. This is why paying attention to the relationships between each variable, and accounting for collinearity in the data is so important.
 
-Encourage users to stay longer on the website, as higher engagement correlates with a higher conversion rate.
-Switch to the new website entirely, as it leads to higher engagement and a significantly higher conversion rate.
-Avoid targeting users based on language preference, as conversion rates do not significantly differ by language.
+
 Installation and Setup:
 
 To run the analysis:
 
 Clone the repository:
 git clone https://github.com/ameliatodd2002/DS-Portfolio.git
-cd Project3_Statistical_Analysis
+cd Project4_Supervised_Learning
 Install dependencies:
 pip install -r requirements.txt
 Run the Jupyter Notebook:
-jupyter notebook PROJECT2-2.ipynb
+jupyter notebook PROJECT3-2.ipynb
+
+
 Conclusion:
 
-This statistical analysis provided valuable insights into user behavior, website engagement, and conversion optimization. The findings help businesses understand what drives user subscriptions, validate the effectiveness of a new website design, and make data-driven decisions for improved subscriber growth.
+The final model effectively predicts used smartphone prices with high accuracy, making it useful for pricing strategies in the refurbished device market. Further improvements could include testing non-linear models or adding more market-driven features.
+
