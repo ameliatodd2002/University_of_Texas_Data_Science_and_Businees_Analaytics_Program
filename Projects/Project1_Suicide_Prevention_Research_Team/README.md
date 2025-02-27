@@ -2,7 +2,7 @@ Suicide Prevention Research Team Census Geocoder Interaction Program
 
 Project Overview:
 
-This project interacts with censusgeocoder as an API. I created this project for the Sucide Prevention Research Team at Lousiana state University in order to automate a task that would have taken weeks, and turned it into an overnight process that the computer could handle unsupervised. This project takes a csv file which includes data from the Texas Children's Hospital. The csv has columns 
+This project interacts with censusgeocoder as an API. I created this project for the Sucide Prevention Research Team at Lousiana state University in order to automate a task that would have taken weeks, and turned it into an overnight process that the computer could handle unsupervised. This project takes a csv file which includes data from the Texas Children's Hospital. The csv has columns ID, address, city, state, and zip code for each of the 249,975 participants. However, censusgeocoder can only process batches of 9999 at once, so this script splits the csv into batches and send them through one at a time. This ensures acceracy, efficiency, and no time wasted if censusgeocoder crashes (which it often did, causing us to start over). Then, this program creates a results csv that inlcudes the address, census tract, state code, county code, and block number. The program creates a datafram from the original data, and enumerates through each batch to create the proper batch size. Then, it calls on another function that reformats the data provided by censusgeocoder into the results data with the set columns.
 
 
 Dataset Information:
