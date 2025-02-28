@@ -43,13 +43,29 @@ Files included in repository:
 
 Analysis and Findings:
 
-Key Insights/Business Recommendations:
+Actionable Insights and Recommendations for INN Hotels:
 
-- Based on this model, we are able to predict the price of a used device through this equation: normalized used price = -0.41727730370151694 + 0.0196548933373735 * ( main_camera_mp ) + 0.013283854744645426 * ( selfie_camera_mp ) + 0.023546993773401727 * ( ram ) + 0.0015971302387318648 * ( weight ) + 1.2082111403732825 * ( normalized_new_price ) + -0.03858244293186329 * ( years_out ) + -0.04183447812024251 * ( brand_name_LG ) + -0.036832609866963295 * ( brand_name_Others ) + -0.04721591042782653 * ( brand_name_Samsung ) + -0.06273438914126221 * ( brand_name_Sony ) + 0.07454635421813148 * ( brand_name_Xiaomi ) + -0.07154813472250998 * ( normalized_new_price_sq )
-- We can explain about 84.4% of the variance in the price of used devices through these variables: main camera resolution, selfie camera resolution, ram, weight, normalized new price, the number of years the device has been out, whether it is an LG device, a device that does not fall into one of the main brand categories, a Samsung device, a Sony device, or a Xiaomi device.
-- Based on these observations, I would advice the startup ReCell to use this equation to figure out which combinations of variables produce th highest resell price, and aim towards selling those devices on their site, as I assume they get a percentage of the profits. So, by using this model they can determine which kinds of devices would produce the highest profits for their company.
-- Also, even if ReCell decides to sell all deices, regardless of the predicted price, being able to use this model to accurately predict the price that a customer is willing to buy it would be extremely beneficial to the company. It would bring customers in because they would be compelled by the prices on the site since they would be pricing it based soley on the components and data of what customers are willing to buy each device for.
-- I would also reccommend that ReCell does not focus too much on individual characteristics of the device alone, as we see in the data that the price can vary drastically for each device depending on the combination of each type of component, not just one component alone. For example, we see that just because a device is heavy does not mean the price or value of the device decreases because this could indicate that the battery size is actually much larger, which is an attractive feature in the device, and could make the price increase significantly. This is why paying attention to the relationships between each variable, and accounting for collinearity in the data is so important.
+- The final predictive model can correctly identify 85.6% of canceled bookings.
+- Key predictors of cancellation:
+  - Longer lead time
+  - Online market segment type
+  - Higher average price per room
+- Patterns observed from the decision tree:
+  - A booking is more likely to be canceled if:
+    - Lead time ≤ 16.5 days
+    - No special requests
+    - Not from the online market segment
+    - Weekend nights ≤ 0.5
+    - Average price per room ≤ 68.5
+    - Not from the offline market segment
+    - Arrival date is the 30th or later
+
+
+Business recommendations:
+
+- Implement an automated system where new bookings are run through the post-pruned decision tree model. If a booking is predicted to be canceled, hotel managers should be alerted to make contingency plans.
+- Consider adjusting cancellation and refund policies based on the probability of cancellation. For example, rooms predicted to be canceled could be double-booked with a flexible reservation system.
+- Continue collecting data and retrain the model periodically to ensure accuracy in predicting cancellations over time.
 
 
 Installation and Setup:
@@ -58,13 +74,13 @@ To run the analysis:
 
 - Clone the repository:
 - git clone https://github.com/ameliatodd2002/DS-Portfolio.git
-- cd Project4_Supervised_Learning
+- cd Project5_Supervised_Learning-Classification
 - Install dependencies:
 - pip install -r requirements.txt
 - Run the Jupyter Notebook:
-- jupyter notebook PROJECT3-2.ipynb
+- jupyter notebook PROJECT4_fullcode2-2.ipynb
 
 
 Conclusion:
 
-The final model effectively predicts used smartphone prices with high accuracy, making it useful for pricing strategies in the refurbished device market. Further improvements could include testing non-linear models or adding more market-driven features.
+This analysis identified key predictors of hotel booking cancellations, with lead time, market segment type, and average room price playing the most significant roles. The final post-pruned decision tree model, achieving an F1 score of 0.808, provides a reliable and generalizable method for predicting cancellations. By implementing an automated system to flag high-risk bookings and adopting dynamic rebooking strategies, INN Hotels can proactively minimize financial losses and optimize occupancy management.
