@@ -2,35 +2,35 @@ Supervised Learning - Classification - INN Hotels Project
 
 Project Overview:
 
-This project analyzes the data of INN Hotels to find which factors have a high influence on booking cancellations, builds a predictive model that can predict which booking is going to be canceled in advance, and helps in formulating profitable policies for cancellations and refunds.
+This project analyzes booking data from INN Hotels to identify key factors influencing cancellations, build a predictive model to anticipate cancellations, and formulate profitable cancellation and refund policies.
 
 Dataset Information:
 
 The data contains the different attributes of customers' booking details. The detailed data dictionary is given below.
 
-- Booking_ID: unique identifier of each booking
+- Booking_ID: Unique identifier of each booking
 - no_of_adults: Number of adults
-- no_of_children: Number of Children
-- no_of_weekend_nights: Number of weekend nights (Saturday or Sunday) the guest stayed or booked to stay at the hotel
-- no_of_week_nights: Number of week nights (Monday to Friday) the guest stayed or booked to stay at the hotel
+- no_of_children: Number of children
+- no_of_weekend_nights: Number of weekend nights (Saturday or Sunday) booked
+- no_of_week_nights: Number of weekday nights (Monday–Friday) booked
 - type_of_meal_plan: Type of meal plan booked by the customer:
   - Not Selected – No meal plan selected
   - Meal Plan 1 – Breakfast
   - Meal Plan 2 – Half board (breakfast and one other meal)
   - Meal Plan 3 – Full board (breakfast, lunch, and dinner)
-- required_car_parking_space: Does the customer require a car parking space? (0 - No, 1- Yes)
-- room_type_reserved: Type of room reserved by the customer. The values are ciphered (encoded) by INN Hotels.
-- lead_time: Number of days between the date of booking and the arrival date
+- required_car_parking_space: Whether a parking space was requested (0 - No, 1 - Yes)
+- room_type_reserved: Encoded room type designation
+- lead_time: Days between booking and arrival
 - arrival_year: Year of arrival date
 - arrival_month: Month of arrival date
 - arrival_date: Date of the month
-- market_segment_type: Market segment designation.
-- repeated_guest: Is the customer a repeated guest? (0 - No, 1- Yes)
-- no_of_previous_cancellations: Number of previous bookings that were canceled by the customer prior to the current booking
-- no_of_previous_bookings_not_canceled: Number of previous bookings not canceled by the customer prior to the current booking
-- avg_price_per_room: Average price per day of the reservation; prices of the rooms are dynamic. (in euros)
-- no_of_special_requests: Total number of special requests made by the customer (e.g. high floor, view from the room, etc)
-- booking_status: Flag indicating if the booking was canceled or not.
+- market_segment_type: Market segment classification
+- repeated_guest: Whether the guest is a repeat customer (0 - No, 1 - Yes)
+- no_of_previous_cancellations: Previous cancellations by the customer
+- no_of_previous_bookings_not_canceled: Previous bookings not canceled
+- avg_price_per_room: Average daily room price in euros
+- no_of_special_requests: Number of special requests (e.g., high floor, view)
+- booking_status: Whether the booking was canceled (Target Variable)
 
 
 Files included in repository:
@@ -41,31 +41,61 @@ Files included in repository:
 - requirements.txt – List of required Python libraries.
 
 
+Models Tested & Performance:
+
+This project evaluated multiple supervised learning models for predicting cancellations.
+
+1. Logistic Regression Analysis:
+- Tested a Logistic Regression Model to predict cancellations.
+- Results: Moderate accuracy but weaker than decision tree models, as it struggled to capture nonlinear patterns.
+2. Decision Tree Model (Baseline):
+- Basic decision tree classifier tested.
+- Strengths: Captured complex interactions in the data.
+- Weaknesses: Overfitted the training data, reducing generalization ability.
+3. Pre-Pruned Decision Tree:
+- Applied pre-pruning (max depth, min samples split, min samples leaf) to prevent overfitting.
+- Results: Improved generalization but still slightly over-complex.
+4. Post-Pruned Decision Tree (Final Model Chosen):
+- Used cost-complexity pruning (CCP) to remove unnecessary branches.
+- Final Performance:
+  - Accuracy: 86.9%
+  - Recall: 85.6%
+  - Precision: 76.6%
+  - F1 Score: 0.808
+  - Balanced generalization & accuracy.
+
+Why Decision Tree (Post-Pruned) Was Selected:
+- Higher interpretability than logistic regression.
+- Better performance than the pre-pruned model.
+- More generalizable than the unpruned decision tree.
+
+
 Analysis and Findings:
 
 Actionable Insights and Recommendations for INN Hotels:
 
-- The final predictive model can correctly identify 85.6% of canceled bookings.
-- Key predictors of cancellation:
+- The final post-pruned decision tree model achieved an F1 score of 0.808, making it the most reliable and generalizable predictive model.
+- The model correctly identifies 85.6% of canceled bookings.
+- Top predictors of cancellation:
   - Longer lead time
-  - Online market segment type
-  - Higher average price per room
-- Patterns observed from the decision tree:
+  - Market segment type (Online bookings more likely to cancel)
+  - Higher average room price
+- Patterns Observed from the Decision Tree:
   - A booking is more likely to be canceled if:
-    - Lead time ≤ 16.5 days
-    - No special requests
-    - Not from the online market segment
-    - Weekend nights ≤ 0.5
-    - Average price per room ≤ 68.5
-    - Not from the offline market segment
-    - Arrival date is the 30th or later
+  - Lead time ≤ 16.5 days
+  - No special requests
+  - Not from the online market segment
+  - Weekend nights ≤ 0.5
+  - Average price per room ≤ 68.5
+  - Not from the offline market segment
+  - Arrival date is the 30th or later
 
+  
+Business Recommendations:
 
-Business recommendations:
-
-- Implement an automated system where new bookings are run through the post-pruned decision tree model. If a booking is predicted to be canceled, hotel managers should be alerted to make contingency plans.
-- Consider adjusting cancellation and refund policies based on the probability of cancellation. For example, rooms predicted to be canceled could be double-booked with a flexible reservation system.
-- Continue collecting data and retrain the model periodically to ensure accuracy in predicting cancellations over time.
+- Implement an automated flagging system where each booking is analyzed using the decision tree model. High-risk bookings can trigger alerts for hotel managers.
+- Adjust cancellation and refund policies based on predicted likelihood of cancellation. For example, rooms at high risk of cancellation could be double-booked using a flexible reservation system.
+- Continue collecting and analyzing booking data to keep the model updated and improve predictive accuracy over time.
 
 
 Installation and Setup:
@@ -83,4 +113,4 @@ To run the analysis:
 
 Conclusion:
 
-This analysis identified key predictors of hotel booking cancellations, with lead time, market segment type, and average room price playing the most significant roles. The final post-pruned decision tree model, achieving an F1 score of 0.808, provides a reliable and generalizable method for predicting cancellations. By implementing an automated system to flag high-risk bookings and adopting dynamic rebooking strategies, INN Hotels can proactively minimize financial losses and optimize occupancy management.
+This analysis identified key predictors of hotel booking cancellations, with lead time, market segment type, and average room price playing the most significant roles. The final post-pruned decision tree model, with an F1 score of 0.808, offers a reliable way to predict cancellations. By implementing an automated system to flag high-risk bookings and adopting dynamic rebooking strategies, INN Hotels can proactively minimize financial losses and optimize occupancy management.
