@@ -35,9 +35,9 @@ The data contains the different attributes of customers' booking details. The de
 
 Files included in repository:
 
-- PROJECT3-2.ipynb – Jupyter Notebook with analysis, regression model, and insights.
-- project3.py - Python script exported from Google Collab
-- used_device_data.csv – Dataset used for analysis and testing.
+- PROJECT4_fullcode2-2.ipynb – Jupyter Notebook with analysis, logistic regression model, decision tree models, and insights.
+- project4_fullcode2.py - Python script exported from Google Collab
+- INNHotelsGroup.csv – Dataset used for analysis and testing.
 - requirements.txt – List of required Python libraries.
 
 
