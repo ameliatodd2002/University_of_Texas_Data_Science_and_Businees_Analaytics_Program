@@ -1,16 +1,18 @@
 Logistic Regression Final Model Performance & Key Insights:
 
-- The final logistic regression model concluded that the following variables had an acceptable p-value after dropping variables with too high p-values, meaning these variables accepted the null hypothesis that the correlation coefficient didn't actually equal 0, meaning it does have a significant enough affect on the y variable to be included in the analysis: 'const', 'no_of_adults', 'no_of_children', 'no_of_weekend_nights', 'no_of_week_nights', 'required_car_parking_space', 'lead_time', 'arrival_year', 'arrival_month', 'repeated_guest', 'no_of_previous_cancellations', 'avg_price_per_room', 'no_of_special_requests', 'type_of_meal_plan_Meal Plan 2', 'type_of_meal_plan_Not Selected', 'room_type_reserved_Room_Type 2', 'room_type_reserved_Room_Type 4', 'room_type_reserved_Room_Type 5', 'room_type_reserved_Room_Type 6', 'room_type_reserved_Room_Type 7', 'market_segment_type_Corporate', 'market_segment_type_Offline'
-- These columns were determined by eliminating muticollinearity, and then identifying the remaining variables that significantly impacted the independent variable (hotel cancellations).
-- The final logistic regression had no multicollinearity, all acceptable p-values; and accuracy, recall, precision, and F1 scores are very similar between testing and training data.
+- The final logistic regression model retained the following variables after removing those with high p-values. These variables had statistically significant effects on the dependent variable (hotel cancellations): const, no_of_adults, no_of_children, no_of_weekend_nights, no_of_week_nights, required_car_parking_space, lead_time, arrival_year, arrival_month, repeated_guest, no_of_previous_cancellations, avg_price_per_room, no_of_special_requests, type_of_meal_plan_Meal Plan 2, type_of_meal_plan_Not Selected, room_type_reserved_Room_Type 2, room_type_reserved_Room_Type 4, room_type_reserved_Room_Type 5, room_type_reserved_Room_Type 6, room_type_reserved_Room_Type 7, market_segment_type_Corporate, market_segment_type_Offline
+- Multicollinearity was addressed before finalizing the model, ensuring that only independent, non-redundant variables were included.
+- The final model exhibited balanced performance, with similar accuracy, recall, precision, and F1 scores between training and testing datasets, indicating minimal overfitting.
 
 
 Decision Tree Final Model Performance & Key Insights:
 
-- There was originally overfitting in the deciion tree model according to the train/test confusion matricies. So, I used pruning to refine the model.
-- After trying pre-pruning, we see the importance features have changed dramatically. There are far fewer variables that seem to play a role in determining the classification of the y variable.The scores were still fairly high, and they are extremely close. This means the model is able to provide more generaalizeable results, so it can more accureately predict on unseen data.
-- After trying post-pruning, all the measures were pretty close, especially the f1 measure, which is the measure we are most concerned with. This means the post-pruned model is also producing generalizable results, which means it is effective at predicting on unseen data.
-- After comparing the accuracy, recall, precision, and F1 scores between the original decision tree, pre-pruned decision tree, and post-pruned decision tree mosels, I decided the best fit model would be the post-pruned decision tree with a F1 score of 0.808. I prioritized the F1 score since both of the possible errors in the predictive model (false positives and false negatives) are equally important in this context.
+- The initial decision tree model exhibited overfitting, as evident from the discrepancy between training and test confusion matrices.
+- To address overfitting, pruning techniques were applied:
+  - Pre-pruning: Reduced model complexity, leading to a shift in feature importance. Key predictors became more refined, improving   generalizability.
+  - Post-pruning: Further optimized the tree, balancing complexity and predictive power.
+- After evaluating accuracy, recall, precision, and F1 scores across different pruning methods, the post-pruned decision tree was selected as the best-performing model, achieving an F1 score of 0.808.
+- The F1 score was prioritized since both false positives and false negatives have equal business impact in this context.
 
 
 Actionable Insights and Recommendations for INN Hotels:
