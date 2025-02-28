@@ -17,9 +17,27 @@ Decision Tree Final Model Performance & Key Insights:
 
 Actionable Insights and Recommendations for INN Hotels:
 
-- The model built can be used to predict if a hotel room booking is going to cancel or not and can correctly identify 85.6% of the canceled bookings.
-- The amount of time in advance the room was booked, whether the market segment type was online, and the average price per room were the most important variables in predicting whether a a booking will be cancelled or not.
-- From the decision tree, it has been observed that if the lead time is less than or equal to 16.50, the number of special requests is less than or equal to 0.5, it is not from the market segment online, the number of weekend nights the booking is for is less than or equal to 0.5, the average price per room is less than or equal to 68.50, it is not from the market segment offline, and the arrival date is the 30th of the month or later, the booking is likley to cancel.
-- The company should give a vigilant eye for these values in order to detect machine failure. However, there are a number or these combinations that could be a signal that the booking will cancel, and it would be impossible to memorize each combination. So, I reccommend the hotel company creates a website through which the customers can book their hotel, and for each booking, the website runs it through the post-pruned predictive model created above, and if it falls into the 1 categpry (predictedd to cancel), the manager is notified, and they are able to rearrange or plan accordingly.
-- The profitable policies for cancellations and refunds that I would advise the hotel to adopt is that if a booking fits the above criteria, or any of the other combinations predicted to fall into the cancelled category, they arrange for at least half of these bookings to be cancelled, and fill the room with a different booking instead. That way, in case they do not cancel even if they were predicted to (False positive), there would likley still be an empty room for them, but if they do cancel, at least half of the cancelled bookings were rebooked in preparation, and the hotel significantly decreases their financial losses from cancellations.
-- Another suggestion I have for the hotel company is that because the data provided for this analysis was from part of 2017 through 2018, I would advise the company to continue collecting this same data (mostly the important features though), and provide it to a data scientist to re-perform this analysis so they can get more up to date results
+- The final predictive model can correctly identify 85.6% of canceled bookings.
+- Key predictors of cancellation:
+  - Longer lead time
+  - Online market segment type
+  - Higher average price per room
+- Patterns observed from the decision tree:
+  - A booking is more likely to be canceled if:
+    - Lead time ≤ 16.5 days
+    - No special requests
+    - Not from the online market segment
+    - Weekend nights ≤ 0.5
+    - Average price per room ≤ 68.5
+    - Not from the offline market segment
+    - Arrival date is the 30th or later
+
+
+Business recommendations:
+
+- Implement an automated system where new bookings are run through the post-pruned decision tree model. If a booking is predicted to be canceled, hotel managers should be alerted to make contingency plans.
+- Consider adjusting cancellation and refund policies based on the probability of cancellation. For example, rooms predicted to be canceled could be double-booked with a flexible reservation system.
+- Continue collecting data and retrain the model periodically to ensure accuracy in predicting cancellations over time.
+
+
+This analysis identified key predictors of hotel booking cancellations, with lead time, market segment type, and average room price playing the most significant roles. The final post-pruned decision tree model, achieving an F1 score of 0.808, provides a reliable and generalizable method for predicting cancellations. By implementing an automated system to flag high-risk bookings and adopting dynamic rebooking strategies, INN Hotels can proactively minimize financial losses and optimize occupancy management.
