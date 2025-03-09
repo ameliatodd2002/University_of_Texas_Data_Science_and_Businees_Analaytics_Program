@@ -5,6 +5,13 @@ Project Overview:
 This project applies statistical analysis, A/B testing, and data visualization to evaluate whether the new landing page of an online news portal (E-news Express) is more effective in acquiring new subscribers. Key metrics analyzed include time spent on the page, conversion rate, and language preference.
 
 
+Skills:
+- Hypothesis Testing
+- A/B testing
+- Data Visualization
+- Statistical Inference
+
+
 Dataset Information:
 
 The dataset contains user interaction records with either the new or old landing page. Key columns:
