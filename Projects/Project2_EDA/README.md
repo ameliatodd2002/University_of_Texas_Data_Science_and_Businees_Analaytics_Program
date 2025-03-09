@@ -26,6 +26,13 @@ Files in the Repository:
 - requirements.txt – List of required Python libraries
 
 
+Skills:
+
+- Exploratory Data Analysis (Variable Identification)
+- Univariate analysis
+- Bi-Variate analysis)
+
+
 Analysis & Findings:
 
 Through detailed EDA, I identified trends and insights related to customer behavior, restaurant efficiency, and pricing strategies. Some key observations include:
