@@ -6,10 +6,10 @@ This project analyzes the used devices dataset, builds a model which will help d
 
 Skills:
 
-EDA
-Linear Regression
-Linear Regression assumptions
-Business insights and recommendations
+- EDA
+- Linear Regression
+- Linear Regression assumptions
+- Business insights and recommendations
 
 
 Dataset Information:
