@@ -4,6 +4,16 @@ Project Overview:
 
 This project analyzes booking data from INN Hotels to identify key factors influencing cancellations, build a predictive model to anticipate cancellations, and formulate profitable cancellation and refund policies.
 
+Skills:
+
+- Exploratory Data Analysis
+- Data Preprocessing
+- Logistic Regression
+- Multicollinearity
+- AUC-ROC Curve
+- Decision Tree
+- Pruning
+
 Dataset Information:
 
 The data contains the different attributes of customers' booking details. The detailed data dictionary is given below.
