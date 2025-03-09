@@ -4,6 +4,14 @@ Project Overview:
 
 This project analyzes the used devices dataset, builds a model which will help develop a dynamic pricing strategy for used and refurbished devices, and identifies factors that significantly influence the price.
 
+Skills:
+
+EDA
+Linear Regression
+Linear Regression assumptions
+Business insights and recommendations
+
+
 Dataset Information:
 
 The data contains the different attributes of used/refurbished phones and tablets. The data was collected in the year 2021. The detailed data dictionary is given below:
