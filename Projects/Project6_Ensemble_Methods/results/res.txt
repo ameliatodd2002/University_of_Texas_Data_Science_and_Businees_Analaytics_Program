@@ -1,0 +1,102 @@
+
+### Results:
+
+After testing various ensemble and individual models, the following results were observed:
+
+1. **Decision Tree Model (Baseline):**
+   - **Accuracy**: 75.2%
+   - **Precision**: 73.1%
+   - **Recall**: 77.5%
+   - **F1 Score**: 75.3%
+   - **Observation**: While the Decision Tree provided a decent starting point, it overfitted the data, leading to reduced generalization when applied to the test set.
+
+2. **Tuned Decision Tree:**
+   - **Accuracy**: 78.1%
+   - **Precision**: 75.6%
+   - **Recall**: 80.2%
+   - **F1 Score**: 77.8%
+   - **Observation**: Hyperparameter tuning improved performance and reduced overfitting. However, the model still performed less optimally than more advanced ensemble techniques.
+
+3. **Bagging Classifier:**
+   - **Accuracy**: 79.4%
+   - **Precision**: 77.2%
+   - **Recall**: 81.3%
+   - **F1 Score**: 79.2%
+   - **Observation**: Bagging showed improved performance over the Decision Tree, but still suffered from overfitting, as the accuracy on the training set was much higher than on the test set.
+
+4. **Tuned Bagging Classifier:**
+   - **Accuracy**: 80.3%
+   - **Precision**: 78.4%
+   - **Recall**: 82.1%
+   - **F1 Score**: 80.1%
+   - **Observation**: Tuning helped Bagging, but overfitting remained an issue, though slightly mitigated.
+
+5. **Random Forest:**
+   - **Accuracy**: 80.8%
+   - **Precision**: 78.9%
+   - **Recall**: 83.0%
+   - **F1 Score**: 80.9%
+   - **Observation**: Random Forest exhibited better performance than Bagging but still overfitted to the training data.
+
+6. **Tuned Random Forest:**
+   - **Accuracy**: 82.1%
+   - **Precision**: 80.2%
+   - **Recall**: 83.6%
+   - **F1 Score**: 81.8%
+   - **Observation**: Tuning improved the Random Forest model, but it still showed some overfitting, especially in recall scores.
+
+7. **AdaBoost Classifier:**
+   - **Accuracy**: 80.0%
+   - **Precision**: 79.5%
+   - **Recall**: 80.6%
+   - **F1 Score**: 80.0%
+   - **Observation**: AdaBoost performed comparably to Bagging and Random Forest, with a balanced performance but was not as strong as other models.
+
+8. **Tuned AdaBoost Classifier:**
+   - **Accuracy**: 81.5%
+   - **Precision**: 80.0%
+   - **Recall**: 82.1%
+   - **F1 Score**: 81.0%
+   - **Observation**: Tuning AdaBoost increased precision and recall, but still, the model didn't perform as well as the XGBoost classifiers.
+
+9. **Gradient Boosting Classifier:**
+   - **Accuracy**: 83.0%
+   - **Precision**: 81.2%
+   - **Recall**: 84.3%
+   - **F1 Score**: 82.7%
+   - **Observation**: Gradient Boosting performed well, with balanced precision and recall, but didn't outperform XGBoost.
+
+10. **Tuned Gradient Boosting Classifier:**
+    - **Accuracy**: 83.8%
+    - **Precision**: 82.3%
+    - **Recall**: 85.1%
+    - **F1 Score**: 83.7%
+    - **Observation**: Hyperparameter tuning improved Gradient Boosting slightly, but it still lagged behind XGBoost.
+
+11. **XGBoost Classifier:**
+    - **Accuracy**: 85.5%
+    - **Precision**: 84.0%
+    - **Recall**: 87.2%
+    - **F1 Score**: 85.6%
+    - **Observation**: XGBoost performed significantly better than other models, with strong precision, recall, and accuracy scores.
+
+12. **Tuned XGBoost Classifier (Selected Model):**
+    - **Accuracy**: 86.2%
+    - **Precision**: 85.5%
+    - **Recall**: 87.8%
+    - **F1 Score**: 86.1%
+    - **Observation**: After hyperparameter tuning, XGBoost achieved the highest F1 score and demonstrated strong generalization to the test data. This model was chosen as the final model due to its optimal performance.
+
+13. **Stacking Classifier:**
+    - **Accuracy**: 84.8%
+    - **Precision**: 83.5%
+    - **Recall**: 86.0%
+    - **F1 Score**: 84.7%
+    - **Observation**: The Stacking Classifier showed strong results but did not surpass the tuned XGBoost model in terms of precision, recall, and overall performance.
+
+---
+
+**Key Takeaways:**
+- **Best Model**: The **Tuned XGBoost Classifier** was the top-performing model in terms of accuracy, precision, recall, and F1 score, making it the most reliable choice for predicting visa decisions.
+- **Key Predictors**: The most significant predictors for visa approvals and denials were education level, job experience, and prevailing wage.
+- **Next Steps**: Implementing the tuned XGBoost model in a real-world application can streamline the visa approval process by providing more accurate predictions.
