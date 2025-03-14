@@ -37,7 +37,7 @@ The data contains the different attributes of the employee and the employer. The
 
 Files included in repository:
 
-- PROJECT5_fullcode2-2.ipynb – Jupyter Notebook with analysis, logistic regression model, decision tree models, and insights.
+- PROJECT5_fullcode2-2.ipynb – Jupyter Notebook with analysis, training/testing models, tuning models, and insights.
 - project5_fullcode2.py - Python script exported from Google Collab
 - EasyVisa.csv – Dataset used for analysis and testing.
 - requirements.txt – List of required Python libraries.
