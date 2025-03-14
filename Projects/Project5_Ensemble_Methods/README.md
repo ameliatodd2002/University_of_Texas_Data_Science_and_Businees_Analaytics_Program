@@ -90,7 +90,7 @@ To run the analysis:
 
 - Clone the repository:
 - git clone https://github.com/ameliatodd2002/DS-Portfolio.git
-- cd Project6_Ensemble_Methods
+- cd Project5_Ensemble_Methods
 - Install dependencies:
 - pip install -r requirements.txt
 - Run the Jupyter Notebook:
