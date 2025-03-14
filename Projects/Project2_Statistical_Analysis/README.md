@@ -53,7 +53,7 @@ To run the analysis:
 
 - Clone the repository:
 - git clone https://github.com/ameliatodd2002/DS-Portfolio.git  
-- cd Project3_Statistical_Analysis  
+- cd Project2_Statistical_Analysis  
 - Install dependencies:
 - pip install -r requirements.txt  
 - Run the Jupyter Notebook:
