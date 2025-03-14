@@ -56,7 +56,7 @@ To run the analysis, follow these steps:
 
 Clone the repository:
 - git clone https://github.com/ameliatodd2002/DS-Portfolio.git
-- cd Project2_EDA
+- cd Project1_EDA
 - Install dependencies:
 - pip install -r requirements.txt
 - Open and run the Jupyter Notebook (PROJECT1-4.ipynb).
