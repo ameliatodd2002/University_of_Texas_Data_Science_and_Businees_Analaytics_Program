@@ -1,0 +1,15 @@
+Model Performance & Findings
+
+
+- Primary Metric: Recall Score (Prioritizing identification of failed machines).
+- Best Model: Tuned XGBoost with Oversampled Data – 99% accuracy, 85% recall, 96% precision, 90% F1-score.
+
+Key Observations:
+
+- Random Forest & Bagging Classifier – Strong recall and minimal overfitting.
+- Gradient Boosting (GBM) – Slightly lower recall but good generalizability.
+- AdaBoost – Underperformed in recall.
+- Decision Tree – Prone to overfitting with poor training-validation agreement.
+- XGBoost – Best-performing model even before tuning; further improved with hyperparameter tuning and oversampling.
+
+Final Decision: The XGBoost model with oversampled data was selected for deployment due to its superior recall score and overall performance.
