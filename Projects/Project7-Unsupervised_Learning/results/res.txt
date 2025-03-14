@@ -1,0 +1,22 @@
+Comparing Model Performance & Findings:
+
+- Execution Time:
+  - K-Means (3 clusters) – 0.0503 seconds
+  - Hierarchical Clustering (4 clusters) – 0.0170 seconds (Faster)
+- Cluster Quality (Silhouette Score):
+  - K-Means – 0.8070
+  - Hierarchical – 0.8042 (K-Means produced slightly more distinct clusters)
+- Cluster Comparison:
+  - K-Means grouped stocks into 3 clusters, while Hierarchical Clustering used 4 clusters.
+  - The two models produced different groupings, making direct comparison difficult.
+  
+
+Analysis and Findings:
+
+Actionable Insights/Business Recommendations:
+
+- K-Means clustering (3 clusters) is ideal for a simplified, clear stock categorization system.
+- Hierarchical clustering (4 clusters) allows for a more nuanced understanding of stock performance.
+- Trade&Ahead can use both models to provide different perspectives on stock recommendations.
+
+This project successfully applied unsupervised learning to group stocks based on financial attributes. The results can help Trade&Ahead provide better stock recommendations by leveraging different clustering approaches.
