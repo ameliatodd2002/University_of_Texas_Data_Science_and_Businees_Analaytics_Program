@@ -1,76 +1,75 @@
-Unsupervised Learning - Model Tuning - Trade&Ahead Project
+Unsupervised Learning - Trade&Ahead Project
 
 Project Overview:
 
-"ReneWind" is a company focused on enhancing wind energy production by leveraging machine learning. This project aimed to develop and fine-tune classification models to predict generator failures in wind turbines using sensor data. By identifying failures early, the company can reduce maintenance costs and optimize resource allocation.
+This project analyzes stock data, groups stocks based on financial attributes, and provides insights into the characteristics of each group using unsupervised learning techniques.
 
 Skills:
 
 - Exploratory Data Analysis
-- Data Preprocessing
-- Class Imbalance Handling (Upsampling & Downsampling)
-- Regularization & Hyperparameter Tuning
-- Model Evaluation & Performance Optimization
+- K-Means Clustering
+- Hierarchical Clustering
+- Cluster Profiling
   
 
 Dataset Information:
 
-The dataset consists of sensor readings collected from wind turbine generators. The data has been preprocessed for analysis.
+The dataset includes stock prices and financial indicators for companies listed on the New York Stock Exchange (NYSE).
 
-Train.csv - To be used for training and tuning of models.
-Test.csv - To be used only for testing the performance of the final best model.
-Both the datasets consist of 40 predictor variables and 1 target variable
+Data Dictionary:
+- Ticker Symbol: An abbreviation used to uniquely identify publicly traded shares of a particular stock on a particular stock market
+- Company: Name of the company
+- GICS Sector: The specific economic sector assigned to a company by the Global Industry Classification Standard (GICS) that best defines its business operations
+- GICS Sub Industry: The specific sub-industry group assigned to a company by the Global Industry Classification Standard (GICS) that best defines its business operations
+- Current Price: Current stock price in dollars
+- Price Change: Percentage change in the stock price in 13 weeks
+- Volatility: Standard deviation of the stock price over the past 13 weeks
+- ROE: A measure of financial performance calculated by dividing net income by shareholders' equity (shareholders' equity is equal to a company's assets minus its debt)
+- Cash Ratio: The ratio of a company's total reserves of cash and cash equivalents to its total current liabilities
+- Net Cash Flow: The difference between a company's cash inflows and outflows (in dollars)
+- Net Income: Revenues minus expenses, interest, and taxes (in dollars)
+- Earnings Per Share: Company's net profit divided by the number of common shares it has outstanding (in dollars)
+- Estimated Shares Outstanding: Company's stock currently held by all its shareholders
+- P/E Ratio: Ratio of the company's current stock price to the earnings per share
+- P/B Ratio: Ratio of the company's stock price per share by its book value per share (book value of a company is the net difference between that company's total assets and total liabilities)
 
 
 Files included in repository:
 
-- Todd_Project_6_FullCode-2.ipynb – Jupyter Notebook with full analysis, model training, and tuning.
-- todd_project6_fullcode.py – Python script exported from Google Colab.
-- Train.csv – Training dataset.
-- Test.csv – Testing dataset.
+- PROJECT_stock_Todd-3.ipynb – Jupyter Notebook with full analysis, model fitting, and insights.
+- project_stock_todd.py – Python script exported from Google Colab.
+- stock_data.csv - CSV file including all data from Trade&Ahead
 - requirements.txt – List of required Python libraries.
 
 
 Models Tested & Performance:
 
-This project tested multiple supervised learning models for predicting failures:
+This project created and compared two clustering techniques:
 
-1. Bagging Classifier
-2. Random Forest Classifier
-3. Gradient Boosting Classifier
-4. AdaBoost Classifier
-5. XGBoost Classifier
-6. Decision Tree Classifier
+1. K-Means Clustering
+2. Hierarchical Clustering Model
 
 
-Model Performance & Findings:
+Comparing Model Performance & Findings:
 
-- Primary metric: Recall Score (Identifying failed machines is the priority).
-- Best Model: Tuned XGBoost with Oversampled Data – Achieved 99% accuracy, 85% recall, 96% precision, and 90% F1-score.
-- Key Observations:
-  - Random Forest and Bagging Classifier performed well with balanced recall scores and minimal overfitting.
-  - Gradient Boosting (GBM) had slightly lower recall but good generalizability.
-  - AdaBoost underperformed in recall.
-  - Decision Tree was prone to overfitting and had lower agreement between training and validation sets.
-  - XGBoost outperformed all models even before tuning and was further improved through hyperparameter tuning and oversampling.
- 
-- After regularization, I decided the XGBoost model with oversampled data was the best model, and the one we would proceed with. I picked this model because all the models suffer from overfitting, but the tuned XGBoost model with oversampled data has the highest score.
+- Execution Time:
+  - K-Means (3 clusters) – 0.0503 seconds
+  - Hierarchical Clustering (4 clusters) – 0.0170 seconds (Faster)
+- Cluster Quality (Silhouette Score):
+  - K-Means – 0.8070
+  - Hierarchical – 0.8042 (K-Means produced slightly more distinct clusters)
+- Cluster Comparison:
+  - K-Means grouped stocks into 3 clusters, while Hierarchical Clustering used 4 clusters.
+  - The two models produced different groupings, making direct comparison difficult.
   
 
 Analysis and Findings:
 
 Actionable Insights/Business Recommendations:
 
-- The XGBoost model provides a highly accurate failure prediction system using the company's sensor data. This model uses the 40 predictors provided by the company, and is able to identify when there will be a machine failure with about 99% accuracy, 85% recall, 96% precision, and 90% F1.
-- Implementation Strategy:
-  - Integrate the model into ReneWind's maintenance pipeline.
-  - Continuously feed real-time sensor data into the model.
-  - Flag high-risk turbines for proactive maintenance.
-- Cost Savings:
-  - Avoid unnecessary preventive maintenance on turbines unlikely to fail.
-  - Reduce downtime and extend the lifespan of turbines.
-  - Optimize resource allocation for repairs.
-
+- K-Means Clustering (3 clusters) provides a streamlined way for Trade&Ahead to categorize stocks and offer investment recommendations.
+- Hierarchical Clustering (4 clusters) provides a more granular approach to segmenting stocks.
+- The choice of clustering method depends on the level of separation required. Providing both models allows Trade&Ahead to use them separately or together for deeper insights.
 
 Installation and Setup:
 
@@ -78,13 +77,13 @@ To run the analysis:
 
 - Clone the repository:
 - git clone https://github.com/ameliatodd2002/DS-Portfolio.git
-- cd Project6_Unsupervised_Learning-Model_Tuning
+- cd Project7-Unsupervised_Learning
 - Install dependencies:
 - pip install -r requirements.txt
 - Run the Jupyter Notebook:
-- jupyter notebook Todd_Project_6_FullCode-2.ipynb
+- jupyter notebook PROJECT_stock_Todd-3.ipynb
 
 
 Conclusion:
 
-This project successfully developed and tuned a classification model for predictive maintenance in wind energy. The XGBoost model with oversampling demonstrated the highest performance, making it a valuable tool for ReneWind to minimize costs and improve operational efficiency.
+This project successfully applied unsupervised learning to group stocks based on financial attributes. The results can help Trade&Ahead provide better stock recommendations by leveraging different clustering approaches.
