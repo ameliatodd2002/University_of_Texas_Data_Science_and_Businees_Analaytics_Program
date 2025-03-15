@@ -23,7 +23,7 @@ Breif description of each project included in this repository:
   - Course: Ensemble Techniques
   - Skills: Exploratory Data Analysis, Data Preprocessing, Customer Profiling, Bagging Classifiers (Bagging and Random Forest), Boosting Classifier (AdaBoost, Gradient Boosting, XGBoost), Stacking Classifier, Hyperparameter Tuning using GridSearchCV, Business insights
   - Project Description: Analyze the data of Visa applicants, build a predictive model to facilitate the process of visa approvals, and based on important factors that significantly influence the Visa status recommend a suitable profile for the applicants for whom the visa should be certified or denied.
-- [ReneWind](https://github.com/ameliatodd2002/University_of_Texas_Data_Science_and_Businees_Analaytics_Program/tree/main/Projects)
+- [ReneWind](https://github.com/ameliatodd2002/University_of_Texas_Data_Science_and_Businees_Analaytics_Program/tree/main/Projects/Project6_Model_Tuning)
   - Course: Model Tuning
   - Skills: Up and Downsampling, Regularization, Hyperparameter Tuning
   - Project Description: "ReneWind" is a company working on improving the machinery/processes involved in the production of wind energy using machine learning and has collected data of generator failure of wind turbines using sensors. The objective is to build various classification models, tune them and find the best one that will help identify failures so that the generator could be repaired before failing/breaking and the overall maintenance cost of the generators can be brought down.
